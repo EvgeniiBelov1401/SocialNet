@@ -164,8 +164,6 @@ namespace SocialNet.Controllers.Account
         {
             if (ModelState.IsValid)
             {
-               
-                // var user = _mapper.Map<User>(model);
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 var result = await _signInManager.PasswordSignInAsync(user.Email, model.Password, model.RememberMe, false);
 
