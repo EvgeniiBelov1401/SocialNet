@@ -32,14 +32,20 @@
 }
 
 .btn_submit {
-    background-color: #04AA6D;
+    background-color: mediumspringgreen;
     color: black;
+    font-weight: bold;
+    font-size:20px;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
+    .btn_submit:hover {
+        background-color: mediumseagreen;
+        transition: background-color 1s;
+    }
 
 .frm_text {
     width: 100%;
@@ -83,14 +89,20 @@
 }
 
 .enter_submit {
-    background-color: #5181b8;
-    color: white;
+    background-color: deepskyblue;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
+    .enter_submit:hover {
+        background-color: dodgerblue;
+        transition: background-color 1s;
+    }
 
 .main-img 
 {
