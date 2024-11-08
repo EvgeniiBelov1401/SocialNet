@@ -1,4 +1,5 @@
 ﻿using SocialNet.Models.Users;
+using System.ComponentModel.DataAnnotations;
 
 namespace SocialNet.ViewModels.Account
 {
@@ -10,8 +11,8 @@ namespace SocialNet.ViewModels.Account
         {
             User = user;
         }
-
         public List<User> Friends { get; set; }
+
 
     }
 }

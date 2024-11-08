@@ -9,10 +9,5 @@ namespace SocialNet.Data.Repository
         Task<int> Create(T item);
         Task<int> Update(T item);
         Task<int> Delete(T item);
-        // IEnumerable<T> GetAll();
-        // T Get(int id);
-        // void Create(T item);
-        // void Update(T item);
-        // void Delete(T item);
     }
 }

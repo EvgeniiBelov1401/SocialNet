@@ -23,13 +23,13 @@ namespace SocialNet.Data.Repository
             itog.OrderBy(x => x.Id);
             return itog;
         }
-        
+
         public async Task ClearMessagesAsync(User user)
         {
             var messages = Set.AsEnumerable().Where(x => x.SenderId == user.Id || x.RecipientId == user.Id).ToList();
             foreach (var message in messages)
             {
-               await Delete(message);
+                await Delete(message);
             }
         }
     }

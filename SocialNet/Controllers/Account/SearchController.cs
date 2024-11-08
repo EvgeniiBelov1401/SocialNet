@@ -34,7 +34,7 @@ namespace SocialNetworkMVC.Controllers
             {
                 var t = _mapper.Map<UserWithFriendExt>(x);
                 t.IsFriendWithCurrent = withfriend.Any(y => y.Id == x.Id);
-                t.IsCurrentUser = x.Id == result.Id; // Добавляем проверку, является ли пользователь текущим
+                t.IsCurrentUser = x.Id == result.Id;
                 data.Add(t);
             });
 
@@ -64,16 +64,13 @@ namespace SocialNetworkMVC.Controllers
             {
                 var model = await CreateSearch(search);
 
-
                 return View("UserList", model);
             }
             else
             {
                 return View("UserList", new SearchViewModel());
-                
-               
             }
-            
+
         }
     }
 }

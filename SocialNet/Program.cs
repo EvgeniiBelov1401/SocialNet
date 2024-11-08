@@ -42,13 +42,14 @@ builder.Services
     .AddCustomRepository<Message, MessageRepository>()
     .AddTransient<IUnitOfWork, UnitOfWork>();
 
-builder.Services.AddIdentity<User, IdentityRole>(opts => {
-        opts.Password.RequiredLength = 5;   
-        opts.Password.RequireNonAlphanumeric = false;  
-        opts.Password.RequireLowercase = false; 
-        opts.Password.RequireUppercase = false; 
-        opts.Password.RequireDigit = false;
-    })
+builder.Services.AddIdentity<User, IdentityRole>(opts =>
+{
+    opts.Password.RequiredLength = 5;
+    opts.Password.RequireNonAlphanumeric = false;
+    opts.Password.RequireLowercase = false;
+    opts.Password.RequireUppercase = false;
+    opts.Password.RequireDigit = false;
+})
     .AddEntityFrameworkStores<ApplicationDbContext>();
 // builder.Services.AddFluentValidationAutoValidation().AddValidatorsFromAssemblyContaining<RegisterViewModelValidation>();
 builder.Services.AddControllersWithViews();

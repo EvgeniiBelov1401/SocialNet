@@ -8,14 +8,14 @@ namespace SocialNet.Data.Repository
     {
         public FriendsRepository(ApplicationDbContext db) : base(db)
         {
-            
-        }
-        
 
-        public async Task AddFriendAsync (User target, User friend)
+        }
+
+
+        public async Task AddFriendAsync(User target, User friend)
         {
-           var friends = await Set.FirstOrDefaultAsync(x => x.UserId == target.Id && x.CurrentFriendId == friend.Id);
-        
+            var friends = await Set.FirstOrDefaultAsync(x => x.UserId == target.Id && x.CurrentFriendId == friend.Id);
+
             if (friends == null)
             {
                 var item = new Friend()
@@ -25,7 +25,7 @@ namespace SocialNet.Data.Repository
                     CurrentFriend = friend,
                     CurrentFriendId = friend.Id,
                 };
-        
+
                 await Create(item);
             }
         }

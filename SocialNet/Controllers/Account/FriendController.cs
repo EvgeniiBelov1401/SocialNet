@@ -22,8 +22,8 @@ namespace SocialNetworkMVC.Controllers
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
-        
-        [Route("AddFriend/{id}")]
+
+        [Route("AddFriend")]
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddFriend(string id)

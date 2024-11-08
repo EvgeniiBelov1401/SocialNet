@@ -35,13 +35,14 @@
     background-color: mediumspringgreen;
     color: black;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
+
     .btn_submit:hover {
         background-color: mediumseagreen;
         transition: background-color 1s;
@@ -57,8 +58,7 @@
     margin-bottom: 20px;
 }
 
-.mrgn 
-{
+.mrgn {
     margin: 5px;
 }
 
@@ -99,13 +99,13 @@
     cursor: pointer;
     width: 100%;
 }
+
     .enter_submit:hover {
         background-color: dodgerblue;
         transition: background-color 1s;
     }
 
-.main-img 
-{
+.main-img {
     width: 100%;
     max-width: 500px;
 }
@@ -138,13 +138,12 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
-.date_control 
-{
+.date_control {
     width: 25%;
     display: inline;
     min-width: max-content;
 }
 
-.date_box{
+.date_box {
     width: 100%;
 }

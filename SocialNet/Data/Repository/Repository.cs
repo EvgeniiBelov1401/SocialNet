@@ -10,10 +10,10 @@ namespace SocialNet.Data.Repository
         public DbSet<T> Set { get; private set; }
 
         public Repository(ApplicationDbContext db)
-        
+
         {
             _db = db;
-            var set =_db.Set<T>();
+            var set = _db.Set<T>();
             set.Load();
 
             Set = set;
@@ -24,28 +24,28 @@ namespace SocialNet.Data.Repository
             Set.Add(item);
             return await _db.SaveChangesAsync();
         }
-        
+
         public async Task<int> Delete(T item)
         {
             Set.Remove(item);
             return await _db.SaveChangesAsync();
         }
-        
+
         public async Task<T> Get(int id)
         {
             return await Set.FindAsync(id);
         }
-        
+
         public IEnumerable<T> GetAll()
         {
             return Set;
         }
-        
+
         public async Task<int> Update(T item)
         {
             Set.Update(item);
             return await _db.SaveChangesAsync();
         }
-        
+
     }
 }

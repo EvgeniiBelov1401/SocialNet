@@ -9,14 +9,15 @@
     ViewData["Title"] = "VolebNet";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+
 @if (SignInManager.IsSignedIn(User))
 {
 
 }
 else
 {
-
-
     <div class="row">
         <div class="side">
             <div class="center">
@@ -28,7 +29,7 @@ else
 
         <div class="main">
             <partial name="Login" model="@Model.LoginView" />
-            <partial name="Register" model="@Model.RegisterView"/>
+            <partial name="Register" model="@Model.RegisterView" />
         </div>
 
     </div>
