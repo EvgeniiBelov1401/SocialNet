@@ -61,7 +61,6 @@ namespace SocialNet.Controllers.Account
         public IActionResult Login(string returnUrl = null)
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
-            // return View(new LoginViewModel());
         }
 
         [Authorize]

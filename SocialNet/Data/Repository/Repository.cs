@@ -46,32 +46,6 @@ namespace SocialNet.Data.Repository
             Set.Update(item);
             return await _db.SaveChangesAsync();
         }
-        // public void Create(T item)
-        // {
-        //     Set.Add(item);
-        //     _db.SaveChanges();
-        // }
         
-        // public void Delete(T item)
-        // {
-        //     Set.Remove(item);
-        //     _db.SaveChanges();
-        // }
-        //
-        // public T Get(int id)
-        // {
-        //     return Set.Find(id);
-        // }
-        //
-        // public IEnumerable<T> GetAll()
-        // {
-        //     return Set;
-        // }
-        
-        // public void Update(T item)
-        // {
-        //     Set.Update(item);
-        //     _db.SaveChanges();
-        // }
     }
 }
