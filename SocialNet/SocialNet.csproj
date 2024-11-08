@@ -89,7 +89,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Static\" />
+      <Folder Include="wwwroot\Static\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Static\Logo.png" />
     </ItemGroup>
 
 </Project>
