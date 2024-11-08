@@ -6,6 +6,7 @@
 
         public LoginViewModel LoginView { get; set; }
 
+
         public MainViewModel()
         {
             RegisterView = new RegisterViewModel();

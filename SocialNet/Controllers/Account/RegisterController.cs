@@ -44,7 +44,7 @@ namespace SocialNet.Controllers.Account
             if (ModelState.IsValid)
             {
                 var user = _mapper.Map<User>(model);
-               
+
                 var result = await _userManager.CreateAsync(user, model.PasswordReg);
                 if (result.Succeeded)
                 {

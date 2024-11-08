@@ -24,15 +24,15 @@
         }
 
 .righ-align {
-        float: right;
-    }
+    float: right;
+}
 
-    .topnav input[type=text] {
-        padding: 6px;
-        margin-top: 8px;
-        font-size: 17px;
-        border: none;
-    }
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
 
 @media screen and (max-width: 600px) {
     .topnav .search-container {
@@ -66,7 +66,6 @@
     padding: 10px;
     border-style: dashed;
     margin: 10px;
-
 }
 
 .center-align {
@@ -80,6 +79,7 @@
     width: 100%;
     max-width: 150px;
 }
+
 .min-width-but {
     max-width: 150px;
     width: 100%;

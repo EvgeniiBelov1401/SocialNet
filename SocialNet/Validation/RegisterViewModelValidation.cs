@@ -17,6 +17,6 @@ public class RegisterViewModelValidation : AbstractValidator<RegisterViewModel>
         RuleFor(x => x.Login).NotEmpty();
         RuleFor(x => x.PasswordReg).NotEmpty().Length(5, 8).WithMessage(string.Format("Пароль должен быть длиной минимум {1} и максимум {2} символов.", 5, 8));
         RuleFor(x => x.PasswordConfirm).NotEmpty().Matches(x => x.PasswordReg).WithMessage("Пароли не совпадают!");
-        
+
     }
 }

@@ -39,7 +39,7 @@ namespace SocialNet.Controllers.Account
             var usergen = new GenetateUsers();
             var userlist = usergen.Populate(35);
 
-            foreach(var user in userlist)
+            foreach (var user in userlist)
             {
                 var result = await _userManager.CreateAsync(user, "123456");
 
@@ -61,7 +61,6 @@ namespace SocialNet.Controllers.Account
         public IActionResult Login(string returnUrl = null)
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
-            // return View(new LoginViewModel());
         }
 
         [Authorize]
@@ -138,20 +137,20 @@ namespace SocialNet.Controllers.Account
                 return View("Edit", model);
             }
         }
-        
+
         public async Task<IActionResult> DeleteUser()
         {
             var user = User;
 
             var result = await _userManager.GetUserAsync(user);
-            
+
             var friendsRepository = _unitOfWork.GetRepository<Friend>() as FriendsRepository;
             var messagesRepository = _unitOfWork.GetRepository<Message>() as MessageRepository;
             await _signInManager.SignOutAsync();
-            
+
             friendsRepository.ClearFriendsAsync(result);
             messagesRepository.ClearMessagesAsync(result);
-            
+
             await _userManager.DeleteAsync(result);
 
             return RedirectToAction("Index", "Home");
@@ -164,14 +163,12 @@ namespace SocialNet.Controllers.Account
         {
             if (ModelState.IsValid)
             {
-               
-                // var user = _mapper.Map<User>(model);
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 var result = await _signInManager.PasswordSignInAsync(user.Email, model.Password, model.RememberMe, false);
 
                 if (result.Succeeded)
                 {
-                   return RedirectToAction("MyPage", "AccountManager");
+                    return RedirectToAction("MyPage", "AccountManager");
                 }
                 else
                 {
@@ -257,7 +254,7 @@ namespace SocialNet.Controllers.Account
                     .Where(x => x.Id != result.Id)
                     .Where(x => x.GetFullName().ToLower().Contains(search.ToLower())).ToList();
             }
-            
+
             var withfriend = await GetAllFriend();
 
             var data = new List<UserWithFriendExt>();

@@ -88,4 +88,12 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\Static\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Static\Logo.png" />
+    </ItemGroup>
+
 </Project>

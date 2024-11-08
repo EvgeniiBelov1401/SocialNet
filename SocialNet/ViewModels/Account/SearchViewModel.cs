@@ -2,7 +2,13 @@
 {
     public class SearchViewModel
     {
-        public List<UserWithFriendExt> UserList { get; set; }
-   
+
+        public List<UserWithFriendExt>? UserList { get; set; }
+
+        public SearchViewModel()
+        {
+            UserList = new List<UserWithFriendExt>();
+        }
+
     }
 }

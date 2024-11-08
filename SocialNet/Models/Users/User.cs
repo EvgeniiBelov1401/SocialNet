@@ -26,7 +26,7 @@ namespace SocialNet.Models.Users
 
         public User()
         {
-            Image = "https://via.placeholder.com/500";
+            Image = "https://www.ttk.ee/sites/ttk.ee/files/anonymous-person-221117.jpg";
             Status = "Ура! Я в соцсети!";
             About = "Информация обо мне.";
         }
